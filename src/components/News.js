@@ -18,7 +18,7 @@ const News = (props) => {
     const updateNews = async () => {
         setLoading(true)
         let dataFetcherFromBackend = async () => {
-            let dataOfBackend = await axios.post('https://newsappbackend-production.up.railway.app/postreq', {
+            let dataOfBackend = await axios.post('https://newsgorilla.onrender.com/postreq', {
                 country: props.country,
                 category: props.category,
                 page: page,
@@ -51,7 +51,7 @@ const News = (props) => {
 
     const fetchMoreData = async () => {
         let dataFetcherFromBackend = async () => {
-            let dataOfBackend = await axios.post('https://newsappbackend-production.up.railway.app/postreq', {
+            let dataOfBackend = await axios.post('https://newsgorilla.onrender.com/postreq', {
                 country: props.country,
                 category: props.category,
                 page: page + 1,
